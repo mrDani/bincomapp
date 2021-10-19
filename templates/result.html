@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="container thumbnail">
+    
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Announced Pu Result</h4>
+            {% for announcedpuresult in announcedpuresult %}
+            <div class="row">               
+                <div class="col-md-7">
+                    <h5>Party Abbreviation</h5>
+                    <h5>Party Score</h5>
+                </div>
+                <div class="col-md-3">
+                    <h6>{{announcedpuresult.party_abbreviation}}</h6>
+                    <h6>{{announcedpuresult.party_score}}</h6>
+                </div>
+           
+            </div> 
+            {% endfor %}
+        </div>
+
+    </div>
+    
+</div>
+
+{% endblock %}
